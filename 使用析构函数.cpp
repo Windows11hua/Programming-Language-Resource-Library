@@ -1,3 +1,4 @@
+//è¯¥ç¨‹åºå‡ºç°æœªçŸ¥é”™è¯¯ï¼Œè¯·ä¸è¦ç¼–è¯‘ã€‚
 #include <iostream>
 using namespace std;
 class student
@@ -10,21 +11,21 @@ private:
 public:
 	student();
 	student(const int no,const char* n, int a, float s);
-	~student();										//Îö¹¹º¯Êı
+	~student();										//ææ„å‡½æ•°
 	void show();
 };
 student::student()
 {
 	number = 0;
-	name = NULL;									//Èç¹û²»Ìá¹©²ÎÊı£¬½«nameÉèÖÃÎªNULL.
+	name = NULL;									//å¦‚æœä¸æä¾›å‚æ•°ï¼Œå°†nameè®¾ç½®ä¸ºNULL.
 	age = 0;
 	score = 0;
 }
 student::student(const int no,const char* n, int a, float s)
 {
 	number = no;
-	name = new char[strlen(n) + 1];					//ÉêÇëÄÚ´æ
-	strcpy(name, n);								//×Ö·û´®¸´ÖÆ
+	name = new char[strlen(n) + 1];							//ç”³è¯·å†…å­˜
+	strcpy(name, n);								//æ³¨æ„ï¼è¢«å¼ƒç”¨çš„å‡½æ•°
 	age = a;
 	score = s;
 }
@@ -32,27 +33,27 @@ student::~student()
 {
 	if (name != NULL)
 	{
-		cout << name << "Í¬Ñ§¼´½«ÍËÑ§£¡" << endl;
+		cout << name << "åŒå­¦å³å°†é€€å­¦ï¼" << endl;
 		delete[]name;
 	}
 	else
-		cout << "ÓĞÒ»¸öÍ¬Ñ§¼´½«ÍËÑ§£¡" << endl;
+		cout << "æœ‰ä¸€ä¸ªåŒå­¦å³å°†é€€å­¦ï¼" << endl;
 }
 void student::show()
 {
 	if (name != NULL)
 	{
-		cout << "Ñ§ºÅ£º" << number << "\t";
-		cout << "ĞÕÃû£º" << name << "\t";
-		cout << "ÄêÁä" << age << "\t";
-		cout << "³É¼¨£º" << score << endl;
+		cout << "å­¦å·ï¼š" << number << "\t";
+		cout << "å§“åï¼š" << name << "\t";
+		cout << "å¹´é¾„" << age << "\t";
+		cout << "æˆç»©ï¼š" << score << endl;
 	}
 }
 int main()
 {
 	student s1;
-	student s2(20200101, "ÕÅÈı", 20, 95);
-	student s3(20200102, "ÀîËÄ", 22, 90);
+	student s2(20200101, "å¼ ä¸‰", 20, 95);
+	student s3(20200102, "æå››", 22, 90);
 	s1.show();
 	s2.show();
 	s3.show();
